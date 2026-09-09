@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cardápio online da Lilica Doces">
+  <title>Lilica Doces | Cardápio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa: #ff69b4;
+      --rosa-claro: #ffb6c1;
+      --rosa-suave: #fff0f6;
+      --branco: #ffffff;
+      --verde: #8ee3b0;
+      --azul: #8edcf4;
+      --texto: #493b46;
+      --whatsapp: #25d366;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Quicksand', sans-serif;
+      color: var(--texto);
+      background: linear-gradient(135deg, var(--rosa-suave) 0%, var(--branco) 52%, #eafaff 100%);
+    }
+
+    header {
+      padding: 42px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--rosa-claro), var(--rosa));
+      color: var(--branco);
+      box-shadow: 0 4px 16px rgba(255, 105, 180, .28);
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      text-shadow: 2px 3px 5px rgba(0,0,0,.15);
+    }
+
+    .tagline { margin-top: 10px; font-size: 1.1rem; font-weight: 600; }
+
+    .container { max-width: 1180px; padding: 42px 20px; margin: 0 auto; }
+    .menu-section { margin-bottom: 52px; }
+
+    .section-title {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      color: var(--rosa);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 3px dashed var(--rosa-claro);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      background: var(--branco);
+      border: 2px solid transparent;
+      border-radius: 22px;
+      box-shadow: 0 8px 25px rgba(255, 105, 180, .15);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--rosa-claro);
+      box-shadow: 0 16px 34px rgba(255, 105, 180, .22);
+    }
+
+    .product-image { width: 100%; height: 205px; object-fit: cover; display: block; background: linear-gradient(135deg, var(--verde), var(--azul)); }
+    .product-info { padding: 18px; text-align: center; }
+    .product-name { color: var(--rosa); font-size: 1.14rem; line-height: 1.35; min-height: 52px; }
+    .product-price { display: inline-block; margin-top: 12px; padding: 7px 17px; border-radius: 999px; background: var(--rosa-suave); color: #219653; font-size: 1.25rem; font-weight: 700; }
+
+    footer { padding: 32px 20px; text-align: center; background: linear-gradient(135deg, var(--azul), var(--verde)); color: var(--branco); }
+    .footer-title { font-family: 'Pacifico', cursive; font-size: 1.9rem; margin-bottom: 12px; }
+    .footer-info { line-height: 1.8; font-weight: 600; }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 19px;
+      border-radius: 999px;
+      background: var(--whatsapp);
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 22px rgba(37, 211, 102, .38);
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .whatsapp-float:hover { transform: scale(1.05); filter: brightness(.95); }
+    .whatsapp-icon { width: 25px; height: 25px; fill: currentColor; }
+
+    @media (max-width: 520px) {
+      .whatsapp-float { right: 16px; bottom: 16px; padding: 14px; }
+      .whatsapp-label { display: none; }
+      .product-image { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">🍰 Lilica Doces 🧁</h1>
+    <p class="tagline">Doces feitos com amor para adoçar seu dia</p>
+  </header>
+
+  <main class="container">
+    <section class="menu-section">
+      <h2 class="section-title">🍓 Morangos Cravejados</h2>
+      <div class="products-grid">
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1518635017498-87f514b751ba?auto=format&fit=crop&w=700&q=80" alt="Morango cravejado de maracujá"><div class="product-info"><h3 class="product-name">Morango cravejado de maracujá</h3><p class="product-price">R$ 8,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=80" alt="Morango cravejado de chocolate"><div class="product-info"><h3 class="product-name">Morango cravejado de chocolate</h3><p class="product-price">R$ 8,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=80" alt="Morango cravejado de leite ninho"><div class="product-info"><h3 class="product-name">Morango cravejado de leite ninho</h3><p class="product-price">R$ 8,90</p></div></article>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">🍫 Brownies & Sanduíches</h2>
+      <div class="products-grid">
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&w=700&q=80" alt="Afogadinho de brownie"><div class="product-info"><h3 class="product-name">Afogadinho de brownie</h3><p class="product-price">R$ 12,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=80" alt="Sanduíche de brownie de leite ninho"><div class="product-info"><h3 class="product-name">Sanduíche de brownie de leite ninho</h3><p class="product-price">R$ 14,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Sanduíche de brownie de leite ninho com Nutella"><div class="product-info"><h3 class="product-name">Sanduíche de brownie de leite ninho com Nutella</h3><p class="product-price">R$ 16,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&w=700&q=80" alt="Sanduíche de brownie de brigadeiro"><div class="product-info"><h3 class="product-name">Sanduíche de brownie de brigadeiro</h3><p class="product-price">R$ 14,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Sanduíche de brownie de doce de leite"><div class="product-info"><h3 class="product-name">Sanduíche de brownie de doce de leite</h3><p class="product-price">R$ 14,90</p></div></article>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">🍰 Fatias de Brownie</h2>
+      <div class="products-grid">
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&w=700&q=80" alt="Fatia brownie de leite ninho"><div class="product-info"><h3 class="product-name">Fatia brownie de leite ninho</h3><p class="product-price">R$ 10,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Fatia brownie de leite ninho com Nutella"><div class="product-info"><h3 class="product-name">Fatia brownie de leite ninho com Nutella</h3><p class="product-price">R$ 12,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1564355808539-22fda602a46a?auto=format&fit=crop&w=700&q=80" alt="Fatia brownie de brigadeiro"><div class="product-info"><h3 class="product-name">Fatia brownie de brigadeiro</h3><p class="product-price">R$ 10,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=700&q=80" alt="Fatia brownie de Ferrero Rocher"><div class="product-info"><h3 class="product-name">Fatia brownie de Ferrero Rocher</h3><p class="product-price">R$ 13,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&w=700&q=80" alt="Fatia brownie de Kinder Bueno"><div class="product-info"><h3 class="product-name">Fatia brownie de Kinder Bueno</h3><p class="product-price">R$ 13,90</p></div></article>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">🍓 Coxinhas de Morango</h2>
+      <div class="products-grid">
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1518635017498-87f514b751ba?auto=format&fit=crop&w=700&q=80" alt="Coxinha de morango de brigadeiro"><div class="product-info"><h3 class="product-name">Coxinha de morango de brigadeiro</h3><p class="product-price">R$ 9,90</p></div></article>
+        <article class="product-card"><img class="product-image" src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=80" alt="Coxinha de morango de leite ninho"><div class="product-info"><h3 class="product-name">Coxinha de morango de leite ninho</h3><p class="product-price">R$ 9,90</p></div></article>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">🥤 Copo da Felicidade</h2>
+      <div class="products-grid">
+        <article class="product-card"><img class="product-image" sr
